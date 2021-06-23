@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CodeTheWay.Web.Ui.Models;
+using CodeTheWay.Web.Ui.Services;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +14,16 @@ namespace CodeTheWay.Web.Ui.Controllers
         {
             return View();
         }
+        public async Task<IActionResult> Details(Guid id) 
+        {
+            Barrels thing = await BarrelsService.GetBarrel(id);
+            BarrelsRegisterViewModel barrel = new BarrelsRegisterViewModel()
+            {
+
+
+            };
+            return View(thing);
+        }
+
     }
 }
