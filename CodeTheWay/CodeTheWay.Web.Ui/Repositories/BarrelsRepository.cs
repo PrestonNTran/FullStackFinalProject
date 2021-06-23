@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CodeTheWay.Web.Ui.Repositories
 {
-    public class IBarrelsRepository
+    public class BarrelsRepository
     {
     }
 }
