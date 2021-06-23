@@ -11,6 +11,7 @@ namespace CodeTheWay.Web.Ui.Repositories
     {
         private AppDbContext AppDbContext;
 
+
         public BarrelsRepository(AppDbContext dbContext)
         {
             this.AppDbContext = dbContext;

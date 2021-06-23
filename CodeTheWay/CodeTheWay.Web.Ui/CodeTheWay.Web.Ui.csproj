@@ -29,6 +29,8 @@
   <ItemGroup>
     <Folder Include="Models\ViewModels\" />
     <Folder Include="Data\" />
+    <Folder Include="Views\Barrels\" />
+    <Folder Include="NewData\" />
   </ItemGroup>
 
 </Project>
