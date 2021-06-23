@@ -43,7 +43,7 @@ namespace CodeTheWay.Web.Ui.Repositories
             return await this.AppDbContext.Barrels.ToListAsync();
 
         }
-        private AppDbContext AppDbContext;
+      
         public async Task<Barrels> Update(Barrels model)
         {
             var result = AppDbContext.Barrels.Update(model);
