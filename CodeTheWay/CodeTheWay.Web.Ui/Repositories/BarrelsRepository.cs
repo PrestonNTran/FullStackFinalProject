@@ -5,8 +5,6 @@ using System.Threading.Tasks;
 using CodeTheWay.Web.Ui.Models;
 using Microsoft.EntityFrameworkCore;
 
-using CodeTheWay.Web.Ui.Models;
-
 namespace CodeTheWay.Web.Ui.Repositories
 {
     public class BarrelsRepository : IBarrelsRepository
