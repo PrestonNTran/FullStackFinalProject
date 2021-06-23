@@ -27,24 +27,24 @@ namespace CodeTheWay.Web.Ui.Repositories
         }
         public async Task<Barrels> Delete(Barrels model)
         {
-            AppDbContext.Barrels.Remove(model);
+            AppDbContext.Barrelss.Remove(model);
             await AppDbContext.SaveChangesAsync();
             return model;
         }
 
         public async Task<Barrels> GetBarrel(Guid id)
         {
-            return await AppDbContext.Barrels.FirstOrDefaultAsync(i => i.Id == id);
+            return await AppDbContext.Barrelss.FirstOrDefaultAsync(i => i.Id == id);
 
         }
         public async Task<List<Barrels>> GetBarrels()
         {
-            return await this.AppDbContext.Barrels.ToListAsync();
+            return await this.AppDbContext.Barrelss.ToListAsync();
 
         }
         public async Task<Barrels> Update(Barrels model)
         {
-            var result = AppDbContext.Barrels.Update(model);
+            var result = AppDbContext.Barrelss.Update(model);
             await AppDbContext.SaveChangesAsync();
             return result.Entity;
         }
