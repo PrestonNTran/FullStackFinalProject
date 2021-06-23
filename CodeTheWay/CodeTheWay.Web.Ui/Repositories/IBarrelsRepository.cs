@@ -4,8 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using CodeTheWay.Web.Ui.Models;
 
-using CodeTheWay.Web.Ui.Models;
-
 namespace CodeTheWay.Web.Ui.Repositories
 {
     interface IBarrelsRepository
@@ -13,9 +11,7 @@ namespace CodeTheWay.Web.Ui.Repositories
         public Task<List<Barrels>> GetBarrels();
         public Task<Barrels> GetBarrel(Guid id);
         public Task<Barrels> Create(Barrels barrel);
-        public Task<Barrels> Delete(Barrels model);
-        public Task<Barrels> Details(Barrels model);
-
+        public Task<Barrels> Delete(Barrels model);        
         public Task<Barrels> Update(Barrels model);
     }
 }
