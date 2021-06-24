@@ -5,68 +5,83 @@
     @*
         ViewData["Title"] = "Index";
 *@
-<div>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+</head>
+
+<div class="container-fluid">
     <table>
-        <tr>
-            <th>
+        <tr class="row">
+            <th class="col-sm-2">
                 Radius
             </th>
-            <th>
+            <th class="col-sm-2">
                 Height
             </th>
-            <th>
+            <th class="col-sm-2">
                 Weight
             </th>
-            <th>
+            <th class="col-sm-2">
                 Material
             </th>
-            <th>
+            <th class="col-sm-2">
                 Contents
             </th>
-            <th>
+            <th class="col-sm-2">
                 Location
             </th>
         </tr>
     </table>
 </div>
-<table>
-@foreach (var item in Model)
-{
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Radius)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Height)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Weight)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Material)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Contents)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Location)
-    </td>
-    <td>
-        <div>
-            <div>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id })
-            </div>
-        </div>
-        <div>
-            @Html.ActionLink("Details", "Details", new { id = item.Id })
-        </div>
-        <div>
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-        </div>
-    </td>
-</tr>
-}
-</table>
-<div>
+<div class="container-fluid">
+    <table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="col-sm-2">
+                    @Html.DisplayFor(modelItem => item.Radius)
+                </td>
+                <td class="col-sm-2">
+                    @Html.DisplayFor(modelItem => item.Height)
+                </td>
+                <td class="col-sm-2">
+                    @Html.DisplayFor(modelItem => item.Weight)
+                </td>
+                <td class="col-sm-2">
+                    @Html.DisplayFor(modelItem => item.Material)
+                </td>
+                <td class="col-sm-2">
+                    @Html.DisplayFor(modelItem => item.Contents)
+                </td>
+                <td class="col-sm-2">
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+
+                <td class="col-sm-6">
+                    <div>
+                        <div>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                        </div>
+                    </div>
+                    <div>
+                        @Html.ActionLink("Details", "Details", new { id = item.Id })
+                    </div>
+                    <div>
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </div>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<div class="row">
     <a asp-action="Create">Create a barrel.</a>
 </div>
