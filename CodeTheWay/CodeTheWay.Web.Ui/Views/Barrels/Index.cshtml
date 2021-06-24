@@ -5,8 +5,9 @@
     @*
         ViewData["Title"] = "Index";
 *@
-<div class="container-fluid IndexHeader">
-    <table class="row IndexRow">
+
+<div class="container-fluid">
+    <table>
         <tr class="IndexHeaders">
             <th class="col-sm-2">
                 Radius
@@ -27,12 +28,10 @@
                 Location
             </th>
         </tr>
-    </table>
-</div>
-<div class="container-fluid">
-    <table>
         @foreach (var item in Model)
         {
+
+
             <tr>
                 <td class="col-sm-2">
                     @Html.DisplayFor(modelItem => item.Radius)
@@ -53,7 +52,7 @@
                     @Html.DisplayFor(modelItem => item.Location)
                 </td>
 
-                <td class="col-sm-6">
+                <td class="col-sm-6 links">
                     <div>
                         <div>
                             @Html.ActionLink("Edit", "Edit", new { id = item.Id })
