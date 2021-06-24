@@ -7,12 +7,12 @@ a.navbar-brand {
     word-break: break-all;
 
 }
+
 .nav-body .a{
     color:#fff;
 }
 /* Provide sufficient contrast against white background */
-a {
- }
+
 
 .btn-primary {
   color: #fff;
@@ -88,4 +88,12 @@ table {
 
 tr:nth-child(1) {
     color: #5F85DB;
+}
+body, h1{
+    color:white;
+}
+a {
+    color:white;
+    padding:3%;
+
 }
