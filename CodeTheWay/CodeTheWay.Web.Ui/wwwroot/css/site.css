@@ -82,6 +82,12 @@ table {
 table, td {
     color: #90B8F8;
 }
+table, td {
+    color: #90B8F8;
+}
+tr:nth-child(even) {
+    background-color: #393f49;
+}
 table {
     background-color: #353941;
 }
