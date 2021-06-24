@@ -39,7 +39,10 @@ namespace CodeTheWay.Web.Ui.Repositories
         }
         public async Task<List<Barrels>> GetBarrels()
         {
-            return await this.AppDbContext.Barrels.ToListAsync();
+            
+            List<Barrels> result = await this.AppDbContext.Barrels.ToListAsync();
+            var stuff = result.OrderBy(Barrels => Barrels.Radius);
+            return stuff.ToList();
 
         }
         public async Task<Barrels> Update(Barrels model)
