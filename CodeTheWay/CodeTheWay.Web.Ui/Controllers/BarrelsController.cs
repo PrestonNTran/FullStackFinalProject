@@ -18,7 +18,22 @@ namespace CodeTheWay.Web.Ui.Controllers
         public BarrelsController(IBarrelsService barrelService) {
             this.barrelservice = barrelService;
         }
-        
+        public async Task<IActionResult> Details(Guid id)
+        {
+            Barrels thing = await barrelservice.GetBarrel(id);
+            BarrelsExtraViewModel barrel = new BarrelsExtraViewModel()
+            {
+                Id = thing.Id,
+                Contents = thing.Contents,
+                Radius = thing.Radius,
+                Material = thing.Material,
+                Height = thing.Height,
+                Location = thing.Location,
+                Weight = thing.Weight,
 
-    }
+
+            };
+            return View(barrel);
+
+        }
 }
